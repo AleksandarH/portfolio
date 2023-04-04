@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul a {
+  font-size: 22px;
+  color: #373b44;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+body {
+  background-color: #d2d0d0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: loading 2s ease-out;
+}
+
+header {
+  background-color: #d2d0d0;
+  color: #373b44;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+  z-index: 10;
+}
+
+.title {
+  width: 30%;
+  font-size: 22px;
+}
+header ul {
+  width: 70%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  font-size: 1.2em;
+  margin: 0 5%;
+}
+span {
+  color: #0e5e6f;
+}
+
+main {
+  position: relative;
+  height: 65vh;
+  width: 92%;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 5px #3a8891;
+  padding: 2em;
+}
+
+main:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 10px solid #d2d0d0;
+  border-bottom: 10px solid #d2d0d0;
+  height: calc(100% - 20px);
+  top: 0;
+  width: calc(100% - 36px);
+  left: 18px;
+}
+main:after {
+  display: block;
+  position: absolute;
+  content: "";
+  border-right: 10px solid #d2d0d0;
+  border-left: 10px solid #d2d0d0;
+  height: calc(100% - 36px);
+  width: calc(100% - 20px);
+  top: 18px;
+  left: 0;
+}
+
+.myInfo {
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  animation: loading 2s forwards;
+  animation-delay: 2s;
+}
+.me {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.me p {
+  font-size: 1.5em;
+  color: #373b44;
+}
+h2 {
+  font-size: 3em;
+  color: #373b44;
+}
+
+.pic {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.down {
+  animation-delay: 3s;
+  margin: 8vh 0;
+  cursor: pointer;
+}
+.down:hover {
+  animation: scaleArrowUp 0.5s forwards;
+}
+
+.down:active {
+  animation: scaleArrowDown 0.5s forwards;
+}
+
+#about {
+  width: 92%;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.aboutMe {
+  padding: 2%;
+  width: 50%;
+}
+
+.aboutMe p {
+  font-size: 1.2em;
+}
+
+.techStack {
+  padding: 2%;
+  width: 40%;
+}
+
+#workContainer {
+  margin-top: 1vh;
+  max-width: 92%;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+}
+.card {
+  width: 40%;
+  height: 35vh;
+  display: flex;
+}
+.cardImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg img {
+  border: 2px solid #0e5e6f;
+
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.cardText {
+  padding: 0 5% 5% 5%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.gitHub {
+  font-size: 1.2rem;
+}
+.contactContainer {
+  display: flex;
+  width: 92%;
+  height: 48vh;
+  justify-content: space-around;
+  margin-bottom: 0vh;
+  margin-top: 5vh;
+}
+.contact {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.contact h2 {
+  margin-bottom: 5vh;
+  color: #373b44;
+}
+.contact h3 {
+  font-size: 1.3rem;
+  color: #373b44;
+}
+
+.contact ul li {
+  font-size: 1.2rem;
+  color: #373b44;
+}
+
+.contact ul li a {
+  color: #373b44;
+  font-size: 1.2rem;
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+.feedback {
+  width: 40%;
+}
+
+.feedback h3 {
+  color: #373b44;
+  margin-bottom: 5vh;
+}
+
+form .button-89 {
+  margin: 3vh 0;
+}
+form .button-89 a {
+  font-size: 22px;
+  color: #373b44;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+footer {
+  color: #373b44;
+  width: 100%;
+  background-color: #3a8891;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  font-size: 1.2rem;
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleArrowUp {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+
+@keyframes scaleArrowDown {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.8;
+  }
+}
